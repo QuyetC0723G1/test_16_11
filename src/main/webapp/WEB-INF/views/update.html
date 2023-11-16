@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h2  {
+            color: cadetblue;
+        }
+        input   {
+            height: 30px;
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            float: right;
+        }
+        tr , td {
+            width: 100%;
+        }
+        td{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        button {
+            height: 30px;
+            float: inherit;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h2>FORM ADD PRODUCT</h2>
+
+    <form action="" method="post" th:object="${student}" enctype="multipart/form-data">
+        <table>
+
+            <tr>
+                <td><label for="name">Name : </label><input id="name" type="text" th:field="*{name}" placeholder="Name"></td>
+            </tr>
+            <tr>
+                <td><label for="color">Color : </label> <input id="color" type="text" th:field="*{address}" placeholder="Address"></td>
+            </tr>
+            <tr>
+                <td><label for="image">Image : </label><input id="image" type="file" th:field="*{image}" placeholder="Image"></td>
+            </tr>
+            <tr>
+                <td><label for="123">Category Id : </label><input id ="123" type="text" th:field="*{classRoom.id}" placeholder="Class Room Id"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>
